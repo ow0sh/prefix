@@ -77,6 +77,16 @@ const Main: FC<PropsWithChildren> = ({ children }) => {
         console.error(error);
       }
     };
+    let callonce = false;
+    if (!callonce) {
+      fetchData();
+      callonce = true;
+    }
+    const intervalTime = 60 * 1000;
+    const interval = setInterval(() => fetchData(), intervalTime);
+    return () => {
+      clearInterval(interval);
+    };
   }, [dispatch]);
 
   return <main>{children}</main>;
