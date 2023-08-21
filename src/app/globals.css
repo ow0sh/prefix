@@ -1,27 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  @apply max-w-full;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+  @apply w-[5px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-default-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-r from-current via-[#40c1fb] to-current bg-[#5981f8] rounded-xl;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-light-blue;
+}
+html {
+  @apply overflow-x-hidden;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply w-full bg-default-black overflow-x-hidden;
 }

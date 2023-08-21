@@ -1,0 +1,12 @@
+.log_in {
+  @apply text-black bg-light-blue border-t-[1px] ml-[5px] whitespace-nowrap
+ border-border-light-blue md:px-[24px] px-[8px] md:py-[10px]
+  text-base flex flex-col justify-center rounded-md transition duration-300
+  hover:bg-darker-blue;
+}
+
+.register {
+  @apply text-text bg-gray border-t-[1px] text-base
+   border-border-gray md:px-[24px] px-[8px] md:py-[10px] 
+   flex flex-col justify-center rounded-md transition duration-300 hover:bg-slate-700;
+}

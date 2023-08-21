@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Disallow: /features/
+Disallow: /footer/
+Disallow: /groups/
+Disallow: /icons/
+Disallow: /sponsors/
+Disallow: /Ellipse1.svg 
+Disallow: /Frame6.jpg
+Disallow: /Group12.svg
+Disallow: /Iconlupa.svg  
+Disallow: /logo.svg 
+Disallow: /mail-02.svg 
+Disallow: /Substractsmall.svg
+Sitemap: http://localhost:3000/sitemap.xml
