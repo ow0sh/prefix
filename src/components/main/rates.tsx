@@ -39,19 +39,17 @@ const Rates = () => {
                   </div>
                 </section>
               </li>
-              {rates.map((rate, index) => {
-                if (rate[1] != undefined) {
-                  return (
-                    <Li
-                      key={rate[1]}
-                      coin={rate[0]}
-                      alt={rate[1]}
-                      price={Number(rate[2])}
-                      change={Number(rate[3])}
-                      volume={Number(rate[4])}
-                    />
-                  );
-                }
+              {rates.map((rate) => {
+                return (
+                  <Li
+                    key={rate[1]}
+                    coin={rate[0]}
+                    alt={rate[1]}
+                    price={Number(rate[2])}
+                    change={Number(rate[3])}
+                    volume={Number(rate[4])}
+                  />
+                );
               })}
             </ul>
           </div>
@@ -75,18 +73,19 @@ const Li = ({ coin, price, change, volume, alt }: LiProps) => {
   function formatNumber(num: number) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   }
+  alt = alt.toUpperCase();
+  console.log(alt);
   let src = '/icons/' + alt + '.svg';
   // если нет подходящей иконки, то используеться иконка биткоина
   if (
-    alt != 'bnb' &&
-    alt != 'btc' &&
-    alt != '1inch' &&
-    alt != 'busd' &&
-    alt != 'eth' &&
-    alt != 'matic'
+    alt != 'BNB' &&
+    alt != 'BTC' &&
+    alt != '1INCH' &&
+    alt != 'BUSD' &&
+    alt != 'ETH' &&
+    alt != 'MATIC'
   )
-    src = '/icons/btc.svg';
-  alt = alt.toUpperCase();
+    src = '/icons/BTC.svg';
   return (
     <li className=" whitespace-nowrap flex justify-between p-[16px] ml-[10px] mt-[8px]">
       <section className="flex">
